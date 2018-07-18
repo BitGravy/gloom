@@ -3,10 +3,10 @@ $(function(){
 	$("#scenariolist").children().click(function(){
 		alert("scenario clicked");
 		$("#scenario").text($(this).text());
-		//$("#scenario").val($(this).text());
+		$("#scenariobutton").val($(this).text());
 
-		alert($("#scenario :selected").val());
-		alert($("#lvl").val());
+		alert($("#scenario").val());
+		alert($("#lvlbutton").val());
 
 		if($("#scenario").val() && $("#lvl").val()) {
 			alert("scenario and lvl have val")
@@ -25,7 +25,7 @@ $(function(){
 
 	$("#lvllist").children().click(function(){
 		$("#lvl").text($(this).text());
-		$("#lvl").val($(this).text());
+		$("#lvlbutton").val($(this).text());
 	});
 	
 	$("#test").children().click(function(){
