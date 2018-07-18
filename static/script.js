@@ -4,7 +4,7 @@ $(function(){
 		alert("scenario clicked");
 		$("#scenario").text($(this).text());
 		$("#scenariobutton").val($(this).val());
-
+		alert($(this).val());
 		alert($("#scenariobutton").val());
 		alert($("#lvlbutton").val());
 
