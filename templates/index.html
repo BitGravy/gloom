@@ -15,36 +15,34 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-expand-sm">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">Bit 'O Gloom</a>
+			<a class="navbar-brand" href="#">Bit 'O Gloom</a>
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<div class="dropdown">
+						<button class="btn btn-primary dropdown-toggle" id="scenariobutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="scenario">Scenario</span></button>
+						<ul id="scenariolist" class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
+							{% for i in range(scenarios|length) %}
+							<li><option class="dropdown-item" value="{{scenarionums[i]}}">{{scenarionums[i]}}. {{scenarios[i]}}</option></li>
+							{% endfor %}
+						</ul>
 					</div>
-					<div class="btn-group>
-						<div class="dropdown">
-							<button class="btn btn-primary dropdown-toggle" id="scenariobutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="scenario">Scenario</span></button>
-							<ul id="scenariolist" class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
-								{% for i in range(scenarios|length) %}
-								<li><option class="dropdown-item" value="{{scenarionums[i]}}">{{scenarionums[i]}}. {{scenarios[i]}}</option></li>
-								{% endfor %}
-							</ul>
-						</div>
-						<div class="dropdown">
-							<a class="dropdown-toggle" href="#" id="lvlbutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="lvl">Monster lvl</span></a>
-							<ul id="lvllist" class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
-								<li><a class="dropdown-item" value="0" href="#">lvl 0</a></li>
-								<li><a class="dropdown-item" value="1" href="#">lvl 1</a></li>
-								<li><a class="dropdown-item" value="2" href="#">lvl 2</a></li>
-								<li><a class="dropdown-item" value="3" href="#">lvl 3</a></li>
-								<li><a class="dropdown-item" value="4" href="#">lvl 4</a></li>
-								<li><a class="dropdown-item" value="5" href="#">lvl 5</a></li>
-								<li><a class="dropdown-item" value="6" href="#">lvl 6</a></li>
-								<li><a class="dropdown-item" value="7" href="#">lvl 7</a></li>
-							</ul>
-						</div>
-					</div>						       
-				</div>
-			</div>
+				</li>
+				<li class="nav-item">
+					<div class="dropdown">
+						<a class="dropdown-toggle" href="#" id="lvlbutton" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="lvl">Monster lvl</span></a>
+						<ul id="lvllist" class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" value="0" href="#">lvl 0</a></li>
+							<li><a class="dropdown-item" value="1" href="#">lvl 1</a></li>
+							<li><a class="dropdown-item" value="2" href="#">lvl 2</a></li>
+							<li><a class="dropdown-item" value="3" href="#">lvl 3</a></li>
+							<li><a class="dropdown-item" value="4" href="#">lvl 4</a></li>
+							<li><a class="dropdown-item" value="5" href="#">lvl 5</a></li>
+							<li><a class="dropdown-item" value="6" href="#">lvl 6</a></li>
+							<li><a class="dropdown-item" value="7" href="#">lvl 7</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
 		</nav>
 		<div id="monsterblock">
 			<div style="position:relative; z-index:1"><img src="{{monsterpic}}"></div>
