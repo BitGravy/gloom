@@ -3,7 +3,7 @@ $(function(){
 	$("#scenariolist").children().click(function(){
 		alert("scenario clicked");
 		$("#scenario").text($(this).text());
-		$("#scenariobutton").val($(this).text());
+		$("#scenariobutton").val($(this).val());
 
 		alert($("#scenariobutton").val());
 		alert($("#lvlbutton").val());
@@ -25,7 +25,7 @@ $(function(){
 
 	$("#lvllist").children().click(function(){
 		$("#lvl").text($(this).text());
-		$("#lvlbutton").val($(this).text());
+		$("#lvlbutton").val($(this).val());
 	});
 	
 	$("#test").children().click(function(){
