@@ -5,10 +5,10 @@ $(function(){
 		$("#scenario").text($(this).text());
 		$("#scenariobutton").val($(this).text());
 
-		alert($("#scenario").val());
+		alert($("#scenariobutton").val());
 		alert($("#lvlbutton").val());
 
-		if($("#scenario").val() && $("#lvl").val()) {
+		if($("#scenariobutton").val() && $("#lvlbutton").val()) {
 			alert("scenario and lvl have val")
 			$.getJSON("/monsters", {scenario: $("#scenario").val(), lvl: $("#lvl").val()}, function(data, textStatus, jqXHR){
 				alert("inside function");
