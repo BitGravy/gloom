@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang-"en">
+	<head>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+		<link href="/static/styles.css" rel="stylesheet"/>
+
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="/static/script.js"></script>
+
+		<title>Bit 'O Gloom</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Bit 'O Gloom</a>
+				</div>
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Scenario</a>
+					<ul class="dropdown-menu scrollable-menu" aria-labelledby="navbarDropdown">
+						{% for i in range(scenarios|length) %}
+						<li><a class="dropdown-item" href="#">{{scenarios[i]}}</a></li>
+						{% endfor %}
+					</ul>
+					|
+				</li>
+			</div>
+		</nav>
+		<div class="monsterblock">
+			<div style="position:relative; z-index:1"><img src="{{monsterpic}}"></img></div>
+			<div style="position:relative; top:-20; right:100; z-index:2"><h1>{{monster_name}}</h1></div>
+		</div>
+	</body>
+</html>

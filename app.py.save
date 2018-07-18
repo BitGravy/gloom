@@ -1,0 +1,14 @@
+import os, random
+from flask import Flask, render_template, request
+
+
+app = Flask(__name__)
+
+MONSTERPICDIR = "data/Monsters/"
+
+@app.route("/")
+def index():
+    rand_monster = random.choice(os.listdir(MONSTERPICDIR))
+    return render_template("index.html", monsterpic = MONSTERPICDIR + rand_monster)
+if __name__ == "__main__":
+	app.run(debug=True)

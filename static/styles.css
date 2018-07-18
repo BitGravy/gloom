@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'gloom';
+	src: url('font/PirataOne-Gloomhaven.ttf');
+}
+
+body {
+	font-family: 'gloom';
+	<!-- background-image: url("static/bg/Background General - Right Page.jpg"); -->
+	<!-- background-repeat: no-repeat; -->
+}
+
+nav {
+	background-image: url("bg/Background General - Right Page.jpg");
+	background-color: #e8e8e8;
+	box-shadow: 20px 20px 50px grey;
+}
+
+#navbarDropdown {
+	height: 100px;
+}
+
+.scrollable-menu {
+	height: auto;
+	max-height: 200px;
+	overflow-x: hidden;
+}
