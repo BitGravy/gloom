@@ -27,4 +27,10 @@ $(function(){
 		$("#lvl").text($(this).text());
 		$("#lvl").val($(this).text());
 	});
+	
+	$("#test").children().click(function(){
+		$("#testparent").text($(this).text());
+		$("#testparent").val($(this).text());
+		alert($("#test").val());
+	});
 });
